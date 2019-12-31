@@ -7,11 +7,20 @@ import { createStore, applyMiddleware } from 'redux';
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
+// Import saga middleware
+import createSagaMiddleware from 'redux-saga';
 
+// Create sagaMiddleware
+const sagaMiddleware = createSagaMiddleware();
+// Create one store that all components can use
+const storeInstance = createStore(
+    // rootReducer,
+    // Add sagaMiddleware to our store
+    applyMiddleware(sagaMiddleware, logger),
+);
 
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

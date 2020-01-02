@@ -53,20 +53,20 @@ Leverage `redux` and `redux-saga` for this exercise.
 
 ### Part 1: Pages
 
-- [ ] create two pages "**Swatches**" and "**Colors**"
+- [x] create two pages "**Swatches**" and "**Colors**"
     - **Swatches** should be the home URL route, `#/`
     - **Colors** page should be at a colors URL route, `#/colors`
-- [ ] Create navigation in the `Header.js` component
+- [x] Create navigation in the `Header.js` component
     - navigation should have two links one for **Swatches** and another for **Colors**
-- [ ] on the **Swatches** page show a heading that says, "Color Swatches"
-- [ ] on the **Colors** page show a heading that says, "Color Settings"
-- [ ] on each page display some text below the headings to be a placeholder of the page content
-- [ ] setup `redux` and `redux-saga`
+- [x] on the **Swatches** page show a heading that says, "Color Swatches"
+- [x] on the **Colors** page show a heading that says, "Color Settings"
+- [x] on each page display some text below the headings to be a placeholder of the page content
+- [x] setup `redux` and `redux-saga`
 
 
 ### Part 2: Swatches
 
-- [ ] there is an empty `get` router in `blocks.router.js`, make sure to set it up to pull data from the `blocks` table and the `colors` table in order to have all relevant data
+- [x] there is an empty `get` router in `blocks.router.js`, make sure to set it up to pull data from the `blocks` table and the `colors` table in order to have all relevant data
 - [ ] on initial page load **GET** all of the blocks data from the server to display the color blocks on the page
 - [ ] use a 4 column grid to display all of the swatches on the page
 - [ ] each individual swatch should display the color in a square / rectangle and below the color the name / label of the color displayed next to a **Delete** button

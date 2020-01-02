@@ -1,0 +1,32 @@
+.swatchesBody{
+    text-align: auto;
+    display: inline-block;
+    /* margin-left: 2%;
+    margin-right: 2%; */
+} 
+.box{ 
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+
+}
+
+.red{
+    background-color: #ff0000;
+}
+
+.yellow{
+    background-color: #ffff00;
+}
+
+.green{
+    background-color: #00ff00;
+}
+
+.blue{
+    background-color: #0000ff;
+}

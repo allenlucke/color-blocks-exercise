@@ -67,7 +67,7 @@ Leverage `redux` and `redux-saga` for this exercise.
 ### Part 2: Swatches
 
 - [x] there is an empty `get` router in `blocks.router.js`, make sure to set it up to pull data from the `blocks` table and the `colors` table in order to have all relevant data
-- [ ] on initial page load **GET** all of the blocks data from the server to display the color blocks on the page
+- [x] on initial page load **GET** all of the blocks data from the server to display the color blocks on the page
 - [ ] use a 4 column grid to display all of the swatches on the page
 - [ ] each individual swatch should display the color in a square / rectangle and below the color the name / label of the color displayed next to a **Delete** button
 - [ ] when the **Delete** button on an individual swatch is clicked it will remove that swatch from the database and from the list of rendered swatches

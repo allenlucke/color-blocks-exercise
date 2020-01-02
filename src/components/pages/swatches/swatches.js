@@ -27,9 +27,12 @@ class Swatches extends Component {
             return(
                 <div key={index} className="swatchesBody">
                     {/* <h4>{item.id}</h4>
-                    <h4>{item.label}</h4>
                     <h4>{item.hex_code}</h4> */}
-                    <h4>{el}</h4>
+                    {el}
+                    <h4 className="label">{item.label}</h4>
+                    <div className="label">
+                        <button >DELETE</button>
+                    </div>
                 </div>
             )
         })

@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
     const newBlockColor = req.body;
     console.log(newBlockColor)
     const queryString = `INSERT INTO "blocks" ("color_id")
-    VALUES ('${newBlockColor.color_id}');`;
+    VALUES ('${newBlockColor.id}');`;
     pool.query(queryString)
     .then((response) => {
         res.sendStatus(201);

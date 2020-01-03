@@ -4,15 +4,17 @@ import { takeEvery} from 'redux-saga/effects';
 import getBlocksSaga from './getBlocks.saga';
 import deleteBlockSaga from './deleteBlock.saga';
 import getColorsSaga from './getColors.saga';
+import addBlockSaga from './addBlock.saga';
 //Watcher Saga
 function* rootSaga() {
-    // yield takeEvery('DELETE_BLOCK', getBlocksSaga)
+    yield takeEvery('GET_BLOCK', getBlocksSaga)
     console.log('In root saga')
     yield all(
         [
             getBlocksSaga(),
             deleteBlockSaga(),
             getColorsSaga(),
+            addBlockSaga(),
         ]
     );
 }

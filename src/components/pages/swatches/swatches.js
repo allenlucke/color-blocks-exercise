@@ -25,10 +25,10 @@ class Swatches extends Component {
             type: 'GET_BLOCKS',
         })
     }
-    addBlock = (event, id) => {
+    addBlock = (event, item) => {
         this.props.dispatch({
             type: 'ADD_BLOCK',
-            payload: id
+            payload: item
         })
         this.props.dispatch({
             type: 'GET_BLOCKS',
@@ -57,7 +57,7 @@ class Swatches extends Component {
                     <button 
                         className="colorButton"
                         style= {{backgroundColor: el }}
-                        onClick={(event) => this.addBlock(event, item.id)}>
+                        onClick={(event) => this.addBlock(event, item)}>
                         Add a {item.label} Box
                     </button>
                 </div>

@@ -10,10 +10,10 @@ function* deleteBlock(action) {
             url: '/api/blocks/'+action.payload,
             data: action.payload
         })
-        yield put({
-            type: 'SET_DELETE_BLOCK',
-            payload: action.payload.id
-        });
+        // yield put({
+        //     type: 'SET_DELETE_BLOCK',
+        //     payload: action.payload.id
+        // });
     } catch(err) {
         console.log('Error deleting block', err);
     }

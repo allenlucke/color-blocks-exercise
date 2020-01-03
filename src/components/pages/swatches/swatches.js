@@ -50,7 +50,6 @@ class Swatches extends Component {
         return (
             <div >
                 <h2>Color Swatches</h2>
-                <p>Placeholder text</p>
                 {colorBlocks}
             </div>
         )

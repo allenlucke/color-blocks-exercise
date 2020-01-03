@@ -25,6 +25,7 @@ router.get('/', (req, res) => {
 // BASE MODE - make a route to delete a specific color block
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
+    console.log(id);
     const queryString = `DELETE FROM "blocks" WHERE id=$1;`;
     pool.query(queryString, [id])
         .then((result) => {

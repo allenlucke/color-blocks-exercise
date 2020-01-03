@@ -12,6 +12,17 @@ class Swatches extends Component {
             type: 'GET_BLOCKS'
         })
     }
+    
+    deleteBlock = (event, id) => {
+        this.props.dispatch({
+            type: 'DELETE_BLOCK',
+            payload: id
+        })
+        this.props.dispatch({
+            type: 'GET_BLOCKS',
+        })
+    }
+
     render() {
         let el;
         const colorBlocks = this.props.reduxState.getBlocksReducer.map((item, index) => {
@@ -31,7 +42,7 @@ class Swatches extends Component {
                     {el}
                     <h4 className="label">{item.label}</h4>
                     <div className="label">
-                        <button >DELETE</button>
+                        <button onClick={(event) =>this.deleteBlock(event, item.id)}>DELETE</button>
                     </div>
                 </div>
             )

@@ -21,7 +21,19 @@ router.get('/', (req, res) => {
 });
 
 // BASE MODE - make a route to save new color blocks item
-
+router.post('/', (req, res) => {
+    const newBlockColor = req.body;
+    console.log(newBlockColor)
+    const queryString = `INSERT INTO "blocks" ("color_id")
+    VALUES ('${newBlockColor.color_id}');`;
+    pool.query(queryString)
+    .then((response) => {
+        res.sendStatus(201);
+    })
+    .catch((err) => {
+        res.sendStatus(500);
+    })
+});
 // BASE MODE - make a route to delete a specific color block
 router.delete('/:id', (req, res) => {
     const id = req.params.id;

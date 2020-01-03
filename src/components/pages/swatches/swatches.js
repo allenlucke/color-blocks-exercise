@@ -25,6 +25,15 @@ class Swatches extends Component {
             type: 'GET_BLOCKS',
         })
     }
+    addBlock = (event, id) => {
+        this.props.dispatch({
+            type: 'ADD_BLOCK',
+            payload: id
+        })
+        this.props.dispatch({
+            type: 'GET_BLOCKS',
+        })
+    }
 
     render() {
         const colorBlocks = this.props.reduxState.getBlocksReducer.map((item, index) => {
@@ -46,9 +55,11 @@ class Swatches extends Component {
             return(
                 <div key={index} className="swatchesBody">
                     <button 
-                    className="colorButton"
-                    style= {{backgroundColor: el }}
-                    >Add a {item.label} Box</button>
+                        className="colorButton"
+                        style= {{backgroundColor: el }}
+                        onClick={(event) => this.addBlock(event, item.id)}>
+                        Add a {item.label} Box
+                    </button>
                 </div>
             )
         })

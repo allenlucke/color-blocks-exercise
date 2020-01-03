@@ -75,7 +75,7 @@ Leverage `redux` and `redux-saga` for this exercise.
 
 ### Part 3: Swatches, Add Colors
 
-- [ ] **GET** the colors data from the server in order to render all of the **Add Color** buttons
+- [x] **GET** the colors data from the server in order to render all of the **Add Color** buttons
     - a route for getting the colors data already exists in the `colors.router.js` router on the server 
     - the buttons should be added just above where the list of swatches/blocks are displayed
 - [ ] when any of the **Add Colors** buttons are clicked a new swatch should be saved to the database `blocks` table

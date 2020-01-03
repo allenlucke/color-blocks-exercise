@@ -16,6 +16,15 @@
     float: left;
 
 }
+.colorButton{
+    width: 100%;
+    height: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
 
 .red{
     background-color: #ff0000;

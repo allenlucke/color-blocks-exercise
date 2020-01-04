@@ -78,14 +78,14 @@ Leverage `redux` and `redux-saga` for this exercise.
 - [x] **GET** the colors data from the server in order to render all of the **Add Color** buttons
     - a route for getting the colors data already exists in the `colors.router.js` router on the server 
     - the buttons should be added just above where the list of swatches/blocks are displayed
-- [ ] when any of the **Add Colors** buttons are clicked a new swatch should be saved to the database `blocks` table
+- [x] when any of the **Add Colors** buttons are clicked a new swatch should be saved to the database `blocks` table
     - after a new block has been added to the database the swatches on the page should be reloaded
 
 
 ### Part 4: Colors
 
-- [ ] on initial page load use the **GET** route supplied in `colors.router.js` to load all of the available colors
-- [ ] the available colors should be listed stacked one on top of the other
+- [X] on initial page load use the **GET** route supplied in `colors.router.js` to load all of the available colors
+- [X] the available colors should be listed stacked one on top of the other
 - [ ] an available color item should display a square with the color, the hex code for the color, the label/name of the color, and a **Delete** button
 - [ ] when the **Delete** button is clicked the individual color item should be removed from the database in the `colors` table
     - if the user has a swatch in their list with the color they are trying to delete then surface a message to the user asking them to remove the swatches with the same color first

@@ -7,7 +7,7 @@ import getColorsSaga from './getColors.saga';
 import addBlockSaga from './addBlock.saga';
 //Watcher Saga
 function* rootSaga() {
-    yield takeEvery('GET_BLOCK', getBlocksSaga)
+    yield takeEvery('ADD_BLOCK', getBlocksSaga)
     console.log('In root saga')
     yield all(
         [

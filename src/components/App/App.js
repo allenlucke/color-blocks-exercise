@@ -10,7 +10,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 //Routes
 import Swatches from '../pages/swatches/swatches'
-import Colors from '../pages/colors'
+import Colors from '../pages/colors/colors'
 class App extends Component {
     render() {
         return (

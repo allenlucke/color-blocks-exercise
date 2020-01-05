@@ -86,7 +86,7 @@ Leverage `redux` and `redux-saga` for this exercise.
 
 - [X] on initial page load use the **GET** route supplied in `colors.router.js` to load all of the available colors
 - [X] the available colors should be listed stacked one on top of the other
-- [ ] an available color item should display a square with the color, the hex code for the color, the label/name of the color, and a **Delete** button
+- [x] an available color item should display a square with the color, the hex code for the color, the label/name of the color, and a **Delete** button
 - [ ] when the **Delete** button is clicked the individual color item should be removed from the database in the `colors` table
     - if the user has a swatch in their list with the color they are trying to delete then surface a message to the user asking them to remove the swatches with the same color first
 

@@ -4,12 +4,37 @@ import { connect } from 'react-redux';
 const mapStateToProps = reduxState => ({
     reduxState,
 })
-
 class Colors extends Component {
+    state = {
+        newColor: {
+            label: '',
+            hex_code: '',
+        }
+    }
     componentDidMount() {
         this.props.dispatch({
             type: 'GET_COLORS'
         })
+    }
+    handleInputChange = (event, inputKey) => {
+        this.setState({
+            newColor: {
+                ...this.state.newColor,
+                [inputKey]: event.target.value
+            }
+        });
+    }
+    addNewColor = (event, inputKey) => {
+        event.preventDefault();
+        this.props.dispatch({
+            type: 'ADD_COLOR',
+            payload: this.state.newColor })
+            this.setState({
+                newColor: {
+                    label: '',
+                    hex_code: '',
+                }
+            })
     }
     render() {
         const colorList = this.props.reduxState.getColorsReducer.map((item, index) => {
@@ -27,6 +52,14 @@ class Colors extends Component {
         })
         return (
             <div>
+                <h2>Add A Color</h2>
+                <form>
+                    <input type='text' placeholder='Label' value={this.state.newColor.label}
+                    onChange={(event) => this.handleInputChange(event, 'label')} />
+                    <input type='text' placeholder='Hex Code' value={this.state.newColor.hex_code}
+                    onChange={(event) => this.handleInputChange(event, 'hex_code')} />
+                    <input type='submit' value='Add New Color' />
+                </form>
                 <h2>Color Settings</h2>
                 <table>
                     <thead>

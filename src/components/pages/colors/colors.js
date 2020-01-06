@@ -29,11 +29,15 @@ class Colors extends Component {
         this.props.dispatch({
             type: 'ADD_COLOR',
             payload: this.state.newColor })
+            console.log()
             this.setState({
                 newColor: {
                     label: '',
                     hex_code: '',
                 }
+            })
+            this.props.dispatch({
+                type: 'GET_COLORS'
             })
     }
     render() {
@@ -53,7 +57,7 @@ class Colors extends Component {
         return (
             <div>
                 <h2>Add A Color</h2>
-                <form>
+                <form onSubmit={this.addNewColor}>
                     <input type='text' placeholder='Label' value={this.state.newColor.label}
                     onChange={(event) => this.handleInputChange(event, 'label')} />
                     <input type='text' placeholder='Hex Code' value={this.state.newColor.hex_code}

@@ -93,11 +93,11 @@ Leverage `redux` and `redux-saga` for this exercise.
 
 ### Part 5: Colors, Adding a New Color
 
-- [ ] create a form just above your list of colors with 2 fields
+- [x] create a form just above your list of colors with 2 fields
     - field: Name (for `label` data)
     - field: Color Hexcode (for `hex_code` data)
-- [ ] the form should have an **Add Color** button that when clicked will save the user's entered data to the database on the `colors` table
-- [ ] after a new color is added to the database successfully refresh the list of colors
+- [x] the form should have an **Add Color** button that when clicked will save the user's entered data to the database on the `colors` table
+- [x] after a new color is added to the database successfully refresh the list of colors
 
 
 ### Part 6: Colors, Updating a Color
